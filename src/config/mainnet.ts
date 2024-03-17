@@ -4,10 +4,10 @@ export const config = {
   CHAIN_ID: 'secret-4',
   CHAIN_NAME: 'Secret 4',
 
-  SECRET_POST_ADDRESS: 'https://keplr-api-manager.azure-api.net/lcd/',
-  SECRET_RPC: 'https://keplr-api-manager.azure-api.net/rpc/',
+  SECRET_POST_ADDRESS: 'https://lcd.mainnet.secretsaturn.net/',
+  SECRET_RPC: 'https://rpc.mainnet.secretsaturn.net/',
   // SECRET_WS: 'wss://bootstrap.secrettestnet.io:26667/websocket',
-  SECRET_LCD: 'https://keplr-api-manager.azure-api.net/lcd/',
+  SECRET_LCD: 'https://lcd.mainnet.secretsaturn.net/',
 
   BACKEND_URL: 'https://api-bridge-mainnet.azurewebsites.net',
   // PLSM_BACKEND_URL: 'https://bridge-plasm-backend-testnet.azurewebsites.net',
