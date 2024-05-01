@@ -1,4 +1,4 @@
-import RouterStore from 'stores/RouterStore';
+import RouterStore from './RouterStore';
 import { ActionModalsStore } from './ActionModalsStore';
 import { UserStoreEx } from './UserStore';
 import { UserStoreMetamask } from './UserStoreMetamask';

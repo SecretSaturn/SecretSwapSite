@@ -1,12 +1,8 @@
-import * as React from 'react';
 import { Box } from 'grommet';
 import { withTheme } from 'styled-components';
-import { IStyledProps } from 'themes';
-// import background from '../../assets/images/header.png';
-// import background from '../../../assets/images/header.png';
+import { IStyledProps } from '../../../themes/index';
 import { Title } from 'components/Base';
 import { Spinner } from 'ui/Spinner';
-import { CloseIcon } from 'ui/Icons';
 
 interface IHederProps {
   onClose: () => any;

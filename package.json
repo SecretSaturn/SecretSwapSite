@@ -2,27 +2,18 @@
   "name": "secret-swap",
   "version": "2.0.0",
   "private": false,
-  "license": "MIT",
+  "type": "module",
   "scripts": {
-    "//_comment_Win": "Must setup cmdline env: npm config set script-shell \"C:\\Program Files\\git\\bin\\bash.exe\"",
-    "host": "REACT_APP_NETWORK='mainnet' craco start",
-    "host:testnet": "REACT_APP_NETWORK='testnet' craco start",
-    "host:testnet_local": "REACT_APP_NETWORK='testnet_local' craco start",
-    "make": "REACT_APP_NETWORK='mainnet' GENERATE_SOURCEMAP=false craco build",
-    "make:testnet": "REACT_APP_NETWORK='testnet' GENERATE_SOURCEMAP=false craco build",
-    "test": "craco test",
-    "//_comment_legacy": "The following maintains compatibility with legacy set ups e.g. yarn dev",
-    "start": "cross-env REACT_APP_NETWORK='mainnet' craco start",
-    "dev": "cross-env REACT_APP_NETWORK='testnet' craco start",
-    "stg": "cross-env REACT_APP_NETWORK='mainnet' craco start",
-    "build": "cross-env REACT_APP_NETWORK='mainnet' GENERATE_SOURCEMAP=false craco build && cp build/index.html build/404.html"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SecretFinance/SecretSwap"
+    "url": "https://github.com/SecretSaturn/SecretSwapSite"
   },
   "dependencies": {
-    "@craco/craco": "^6.4.3",
     "@iov/encoding": "2.5.0",
     "@metamask/detect-provider": "^1.2.0",
     "@ramonak/react-progress-bar": "^2.1.3",
@@ -50,13 +41,11 @@
     "polished": "^4.1.3",
     "rc-table": "^7.21.0",
     "rc-tooltip": "^5.1.1",
-    "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-copy-to-clipboard": "^5.0.4",
     "react-countdown": "^2.3.2",
     "react-custom-scrollbars": "^4.2.1",
     "react-device-detect": "^2.1.2",
-    "react-dom": "^17.0.2",
     "react-loader-spinner": "^3.1.14",
     "react-notifications-component": "^3.1.0",
     "react-outside-click-handler": "^1.3.0",
@@ -72,7 +61,9 @@
     "superagent": "^6.1.0",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1",
-    "web3": "^1.6.1"
+    "web3": "^1.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.0",
@@ -80,9 +71,7 @@
     "@types/lodash": "^4.14.178",
     "@types/node": "^16.11.12",
     "@types/node-dijkstra": "^2.5.2",
-    "@types/react": "^17.0.37",
     "@types/react-copy-to-clipboard": "^5.0.2",
-    "@types/react-dom": "^17.0.11",
     "@types/react-loader-spinner": "^4.0.0",
     "@types/react-router-dom": "^5.3.2",
     "@types/styled-components": "^5.1.17",
@@ -98,22 +87,17 @@
     "stylus": "^0.56.0",
     "stylus-loader": "4.x",
     "ts-loader": "8.x",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.2.0"
   },
   "resolutions": {
-    "react": "^17.0.2",
     "react-error-overlay": "6.0.9"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
