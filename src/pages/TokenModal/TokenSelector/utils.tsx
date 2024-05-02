@@ -3,19 +3,16 @@ import { UserStoreEx } from 'stores/UserStore';
 import React from 'react';
 import Style from 'style-it';
 import { humanizeBalance } from '../../../utils';
-import { ExecuteResult, SigningCosmWasmClient } from 'secretjs';
+import { SecretNetworkClient } from 'secretjs';
 
 export const ERROR_WRONG_VIEWING_KEY = 'Viewing Key Error';
 
-export async function getNativeBalance(walletAddress: string, secretjs: SigningCosmWasmClient) {
-  return secretjs.getAccount(walletAddress).then(account => {
-    try {
-      const scrt_account = account.balance.find((acc) => acc.denom === 'uscrt');
-      return new BigNumber(scrt_account.amount);
-    } catch (error) {
-      return new BigNumber(0);
-    }
+export async function getNativeBalance(walletAddress: string, secretjs: SecretNetworkClient) {
+  const result = await secretjs.query.bank.balance({
+    denom: "uscrt",
+    address: walletAddress,
   });
+  return result;
 }
 
 export const unlockJsx = (props: { onClick: any }) =>

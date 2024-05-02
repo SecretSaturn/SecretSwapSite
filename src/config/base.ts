@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 const baseConfig = {
   ETH_GAS_LIMIT: 75000,
   SWAP_FEE: 750000,

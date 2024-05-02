@@ -9,7 +9,7 @@ class CustomError extends Error {
 }
 const blacklistedTxs = ['burn'];
 
-export class AsyncSender extends SigningCosmWasmClient {
+export class AsyncSender {
   asyncExecute = async (
     contractAddress: string,
     handleMsg: object,
@@ -24,7 +24,7 @@ export class AsyncSender extends SigningCosmWasmClient {
       throw new CustomError('We are working on add functionality back, please,try later.');
     }
     try {
-      tx = await this.execute(contractAddress, handleMsg, memo, transferAmount, fee);
+     // tx = await this.execute(contractAddress, handleMsg, memo, transferAmount, fee);
     } catch (e) {
       console.error(`failed to broadcast tx: ${e}`);
       throw new CustomError('Failed to broadcast transaction');
@@ -35,7 +35,7 @@ export class AsyncSender extends SigningCosmWasmClient {
       await sleep(3000);
       const res = await retry(
         () => {
-          return this.restClient.txById(tx.transactionHash);
+          //return this.restClient.txById(tx.transactionHash);
         },
         null,
         { retriesMax: 5, interval: 6000 },

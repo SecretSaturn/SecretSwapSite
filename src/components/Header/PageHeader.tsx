@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useHistory, Link } from 'react-router-dom'
 import { observer } from 'mobx-react-lite';
 import { useStores } from '../../stores';
-import {SefiModal} from '../SefiModal';
 import  "./page-header.scss";
 import { notify } from '../../blockchain-bridge/scrt/utils';
 import { formatWithTwoDecimals, sleep } from 'utils';
@@ -34,7 +33,7 @@ export const showMobileMenu = () => {
 const PageHeader = observer(({forceUpdate}:{forceUpdate:any}) =>{
 
     const governancePaths = ['governance','proposal','sefistaking'];
-    const { user, tokens,userMetamask,theme } = useStores();
+    const { user, tokens,theme } = useStores();
     const [prices, setPrices] = useState({'sefi' : '0.0000', 'scrt' : '0.00'})
 
     const handleSignIn = async()=>{
@@ -93,10 +92,6 @@ const PageHeader = observer(({forceUpdate}:{forceUpdate:any}) =>{
                                 <img onClick={switchTheme} src='/static/sun.svg' alt="Key Icon"/> :
                                 <img onClick={switchTheme} src='/static/moon.svg' alt="Key Icon"/>
                             }
-                        </div>
-                        <div className="pricing">
-                            <img src='/static/price-logo-sefi.png' alt='SeFi Price Logo'></img>
-                            <span className="token">SEFI</span> ${prices['sefi']}
                         </div>
                         <div className="pricing">
                             <img src='/static/price-logo-scrt.png' alt='SCRT Price Logo'></img>

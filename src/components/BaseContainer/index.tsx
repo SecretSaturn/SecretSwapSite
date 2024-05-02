@@ -47,7 +47,6 @@ export const BaseContainer: React.FC<IStyledChildrenProps<BoxProps>> = withTheme
             </p>
             <div id="notifications_container"></div>
             {children}
-            <div className={`bridge_link__container`}><a href="https://bridge.scrt.network/">Bridge your assets to Secret Network</a></div>
             <div className='social-media-group'>
                 <a href="https://twitter.com/secret_swap" target="_blank" className='btn-expand'>
                     <img className="social-media-icon" src="/static/twitter-icon.png" alt='Twitter Icon'/>
