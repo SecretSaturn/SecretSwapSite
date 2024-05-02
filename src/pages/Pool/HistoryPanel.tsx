@@ -1,6 +1,5 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
-import { SigningCosmWasmClient } from 'secretjs';
 import { Accordion, Button, Container, Divider, Header, Image } from 'semantic-ui-react';
 import { CSSProperties } from 'styled-components';
 import { displayHumanizedBalance, humanizeBalance } from 'utils';
@@ -10,6 +9,7 @@ import { SwapPair } from '../TokenModal/types/SwapPair';
 import Loader from 'react-loader-spinner';
 import { UserStoreEx } from 'stores/UserStore';
 import { User } from 'components/Base/components/Icons/tsx_svg_icons';
+import { SecretNetworkClient } from 'secretjs';
 
 interface HistoryTx {
   id: number;
@@ -31,7 +31,7 @@ export class HistoryPanel extends React.Component<
     tokens: SwapTokenMap;
     balances: { [symbol: string]: BigNumber | JSX.Element };
     user: UserStoreEx;
-    secretjs: SigningCosmWasmClient;
+    secretjs: SecretNetworkClient;
     selectedPair: SwapPair;
     notify: (type: 'success' | 'error', msg: string, closesAfterMs?: number) => void;
     getBalance: CallableFunction;

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './styles.styl';
+import  './styles.scss';
 import cn from 'classnames';
 import { TokenButton } from './TokenButton';
 import { SwapToken } from '../types/SwapToken';
@@ -10,10 +10,10 @@ export const TokenSelectorButton = (props: { token?: SwapToken; onClick?: any })
   const isEmpty = !props?.token;
   const {theme} = useStores();
   return isEmpty ? (
-    <div className={`${styles.selectATokenButton} ${styles[theme.currentTheme]}`} onClick={props.onClick}>
-      <img src="/static/token-select.svg" alt="Select" className={`${styles.selectATokenImg}`}/>
+    <div className={`selectATokenButton`} onClick={props.onClick}>
+      <img src="/static/token-select.svg" alt="Select" className={`selectATokenImg`}/>
       <span>Select a token</span>
-      <img src="/static/angle-down.svg" alt="Down" className={`${styles.selectATokenDownAngle} ${styles[theme.currentTheme]}`}/>
+      <img src="/static/angle-down.svg" alt="Down" className={`selectATokenDownAngle`}/>
     </div>
   ) : (
     <TokenButton token={props.token} onClick={props.onClick} />

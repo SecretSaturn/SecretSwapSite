@@ -328,7 +328,8 @@ export class UserStoreEx extends StoreConstructor {
           )
         : new SecretNetworkClient({
             url: address,
-            chainId: this.chainId
+            chainId: this.chainId,
+            walletAddress: this.address
         });
       this.syncLocalStorage();
       this.getBalances();
@@ -384,12 +385,12 @@ export class UserStoreEx extends StoreConstructor {
 
   @action public updateScrtBalance = async () => {
     try {
+      console.log(this.secretjs.address)
       const result = await this.secretjs.query.bank.balance({
         denom: "uscrt",
         address: this.secretjs.address,
       });
-      console.log(result)
-      this.balanceSCRT = formatWithSixDecimals(divDecimals(result.amount, 6));
+      this.balanceSCRT = formatWithSixDecimals(divDecimals(result.balance.amount, 6));
     } catch (e) {
       this.balanceSCRT = '0';
     }

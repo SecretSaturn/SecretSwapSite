@@ -23,7 +23,8 @@ import { NativeToken, Token } from '../TokenModal/types/trade';
 import { SecretSwapPairs } from 'stores/SecretSwapPairs';
 import { SecretSwapPools } from 'stores/SecretSwapPools';
 import { getAllPaths } from '../../utils/getAllPaths';
-import * as style from './styles.styl';
+import './styles.scss';
+
 
 export const SwapPageWrapper = observer(() => {
   // SwapPageWrapper is necessary to get the user store from mobx 🤷‍♂️
@@ -679,7 +680,7 @@ export class SwapRouter extends React.Component<
       <BaseContainer>
         <PageContainer>
           <Box
-            className={styles.faqContainer}
+            className='faq-container'
             pad={{ top: 'large' }}
             style={{ alignItems: 'center' }}
           >
@@ -690,7 +691,7 @@ export class SwapRouter extends React.Component<
                 alignItems: 'center',
               }}
               pad={{ bottom: 'medium' }}
-              className={style.box_container}
+              className='box_container'
             >
               {/* <KeplrButton /> */}
               <SwapTab

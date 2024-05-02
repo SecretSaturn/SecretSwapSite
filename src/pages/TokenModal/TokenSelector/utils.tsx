@@ -12,7 +12,7 @@ export async function getNativeBalance(walletAddress: string, secretjs: SecretNe
     denom: "uscrt",
     address: walletAddress,
   });
-  return result;
+  return result.balance;
 }
 
 export const unlockJsx = (props: { onClick: any }) =>

@@ -1,7 +1,7 @@
 import { ITokenInfo } from '../../../stores/interfaces';
 import { Snip20TokenInfo, validateBech32Address } from '../../../blockchain-bridge';
-import { tokenImages } from '../../../components/Earn/EarnRow';
 import { sleep } from 'utils';
+import { tokenImages } from 'config/base';
 
 export type SwapTokenMap = Map<string, SwapToken>;
 

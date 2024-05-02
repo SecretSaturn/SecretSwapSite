@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Image } from 'semantic-ui-react';
 import cn from 'classnames';
-import * as styles from '../styles.styl';
+import './styles.scss';
 import Loader from 'react-loader-spinner';
 import { FlexRowSpace } from '../../../components/Swap/FlexRowSpace';
 import { SwapToken } from '../types/SwapToken';
@@ -74,20 +74,20 @@ export const TokenInfoRow = (props: { token: SwapToken; balance?: any; onClick?:
   const { theme } = useStores();
   return (
     <div
-      className={`${styles.tokenWrapper} ${styles[theme.currentTheme]}`}
+      className={`tokenWrapper`}
       style={{ paddingRight: '1.5rem', display: 'flex' }}
     >
-      <div className={`${styles.tokenInfoRow} ${styles[theme.currentTheme]}`} onClick={props.onClick}>
-        <div className={cn(styles.tokenInfoItemsLeft)}>
+      <div className={`tokenInfoRow`} onClick={props.onClick}>
+        <div className={`tokenInfoItemsLeft`}>
           <Image src={props.token.logo} avatar style={{ boxShadow: 'rgba(0, 0, 0, 0.075) 0px 6px 10px' }} />
-          <p className={`${styles.tokenTitle} ${styles[theme.currentTheme]}`}>{props.token.symbol}</p>
+          <p className={`tokenTitle`}>{props.token.symbol}</p>
         </div>
         <FlexRowSpace />
-        <div className={`${styles.tokenInfoItemsRight} ${styles[theme.currentTheme]}`}>
+        <div className={`tokenInfoItemsRight`}>
           {props.token.identifier !== 'uscrt' ? `${props.token.address.slice(0, 10)}...${props.token.address.slice(-6)}` : 'native'}
         </div>
       </div>
-      <h3 className={`${styles.CopyWithFeedback} ${styles[theme.currentTheme]}`} hidden={!props.token.address}>
+      <h3 className={`CopyWithFeedback`} hidden={!props.token.address}>
         <CopyWithFeedback text={props.token.address} />
       </h3>
     </div>

@@ -11,7 +11,7 @@ import { ClearCustomTokensButton } from './ClearCustomTokens';
 import { ExitIcon } from '../../../ui/Icons/ExitIcon';
 import { SwapToken, SwapTokenFromSnip20Params } from '../types/SwapToken';
 import cn from 'classnames';
-import * as styles from './styles.styl';
+import './styles.scss';
 import { useStores } from '../../../stores';
 import Scrollbars from 'react-custom-scrollbars';
 
@@ -48,7 +48,7 @@ export const TokenSelector = (props: {
     return (t.symbol + String(t.address)).toLowerCase().includes(searchText);
   });
   const renderThumbVertical = () => {
-    return <div className={`${styles.thumb} ${styles[theme.currentTheme]}`}></div>;
+    return <div className={`thumb theme.currentTheme}`}></div>;
   };
   const { theme } = useStores();
   return (
@@ -58,7 +58,7 @@ export const TokenSelector = (props: {
       open={open}
       trigger={<TokenSelectorButton token={props.token} />}
       dimmer={'blurring'}
-      id={styles.modal_container}
+      id={'modal_container'}
     >
       <Modal.Header
         style={{
@@ -69,7 +69,7 @@ export const TokenSelector = (props: {
       >
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <span>Select a token</span>
-          <span style={{ cursor: 'pointer' }} onClick={() => setOpen(false)}>
+          <span style={{ cursor: 'pointer' }} onClick={() => setOpen(true)}>
             <ExitIcon />
           </span>
         </div>
@@ -92,7 +92,7 @@ export const TokenSelector = (props: {
                 }
               }}
               autoFocus
-              className={`${styles.tokenSelectorSearch} ${styles[theme.currentTheme]}`}
+              className={`tokenSelectorSearch`}
               placeholder="Search symbol or paste address"
               onChange={e => setSearchText(e.target.value.trim().toLowerCase())}
             />
@@ -100,15 +100,15 @@ export const TokenSelector = (props: {
         ) : null}
         {props.tokens.length > 0 ? (
           filteredTokens.length === 0 ? (
-            <div className={`${styles.listTokens__container} ${styles[theme.currentTheme]}`}>
+            <div className={`listTokens__container`}>
               <h4>No results found.</h4>
             </div>
           ) : (
-            <div className={`${styles.listTokens__container} ${styles[theme.currentTheme]}`}>
+            <div className={`listTokens__container`}>
               <Scrollbars
                 autoHide
                 renderThumbVertical={renderThumbVertical}
-                className={styles.listTokens__subcontainer}
+                className='listTokens__subcontainer'
               >
                 {filteredTokens
                   .slice()
@@ -161,7 +161,7 @@ export const TokenSelector = (props: {
         )}
       </Modal.Content>
       <Modal.Actions
-        id={styles.actions}
+        id='actions'
         style={{
           borderTop: 'none',
           background: theme.currentTheme == 'light' ? 'white' : '#0E0E10',

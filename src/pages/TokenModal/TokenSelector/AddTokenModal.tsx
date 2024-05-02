@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button, Modal } from 'semantic-ui-react';
 import { SwapInput } from '../../../components/Swap/SwapInput';
-import * as styles from './styles.styl';
+import './styles.scss';
 import cn from 'classnames';
 import { IsValid } from './IsValid';
 import { validateBech32Address } from '../../../blockchain-bridge';
@@ -13,7 +13,7 @@ import { useStores } from '../../../stores';
 const AddTokenButton = (props: { onClick?: any }) => {
   const {theme} = useStores();
   return (
-    <button className={`${styles.addCustomToken__button} ${styles[theme.currentTheme]}`} onClick={props.onClick}>
+    <button className={`addCustomToken__button`} onClick={props.onClick}>
       <Text size='small' color={(theme.currentTheme == 'light')?'dark':'#DEDEDE'}>Add custom token</Text>
     </button>
   );

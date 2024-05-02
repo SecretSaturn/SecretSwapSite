@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { CosmWasmClient, ExecuteResult } from 'secretjs';
+import { Coin, CosmWasmClient, ExecuteResult } from 'secretjs';
 import { Button, Container } from 'semantic-ui-react';
 import { canonicalizeBalance, displayHumanizedBalance, humanizeBalance, sortedStringify, UINT128_MAX } from 'utils';
 import * as styles from './styles.styl';
@@ -7,7 +7,6 @@ import { SwapAssetRow } from '../SwapAssetRow/SwapAssetRow';
 import { TabsHeader } from './TabsHeader';
 import { PriceRow } from '../../components/Swap/PriceRow';
 import { UserStoreEx } from 'stores/UserStore';
-import { Coin } from 'secretjs/types/types';
 import BigNumber from 'bignumber.js';
 import { compareNormalize, shareOfPoolNumberFormat, storeTxResultLocally } from './utils';
 import { extractError, GetContractCodeHash, getFeeForExecute } from '../../blockchain-bridge';
@@ -470,7 +469,7 @@ export class ProvideTab extends React.Component<
     }
 
     return (
-      <Container className={`${styles.swapContainerStyle} ${styles[this.props.theme.currentTheme]}`}>
+      <Container className={`swapContainerStyle`}>
         <TabsHeader />
         <SwapAssetRow
           secretjs={this.props.secretjs}
@@ -627,7 +626,7 @@ export class ProvideTab extends React.Component<
             !showApproveBButton
           }
           fluid
-          className={`${styles.provide_button} ${styles[this.props.theme.currentTheme]}`}
+          className={`provide_button`}
           onClick={async () => {
             if (this.isReadyForProvide()) {
               await this.provideLiquidityAction(this.props.selectedPair);

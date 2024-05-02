@@ -1,6 +1,5 @@
 import BigNumber from 'bignumber.js';
 import { UserStoreEx } from 'stores/UserStore';
-import React from 'react';
 import Style from 'style-it';
 import { humanizeBalance } from '../../utils';
 import { SecretNetworkClient } from 'secretjs';
@@ -12,7 +11,7 @@ export async function getNativeBalance(walletAddress: string, secretjs: SecretNe
     denom: "uscrt",
     address: walletAddress,
   });
-  return result;
+  return result.balance;
 }
 
 export const unlockJsx = (props: { onClick: any }) =>

@@ -1,4 +1,4 @@
-import * as styles from './styles.styl';
+import './styles.scss';
 import cn from 'classnames';
 import React from 'react';
 import { Text } from '../../../components/Base/components/Text';
@@ -9,7 +9,7 @@ export const ClearCustomTokensButton = () => {
   const {theme} = useStores();
   return (
     <button
-      className={`${styles.clearTokenButton} ${styles.ripple} ${styles[theme.currentTheme]}`}
+      className={`clearTokenButton ripple`}
       onClick={() => {
         LocalStorageTokens.clear();
       }}

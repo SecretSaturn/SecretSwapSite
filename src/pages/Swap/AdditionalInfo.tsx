@@ -5,7 +5,7 @@ import { Container, Popup, Icon } from 'semantic-ui-react';
 import { useStores } from '../../stores';
 import { formatSignificantFigures } from 'utils';
 import { PairAnalyticsLink } from '../../components/Swap/PairAnalyticsLink';
-import * as style from './styles.styl';
+import './styles.scss';
 export const AdditionalInfo = ({
   minimumReceived,
   maximumSold,

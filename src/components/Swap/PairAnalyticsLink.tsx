@@ -9,6 +9,7 @@ export const PairAnalyticsLink: React.FC<{ pairAddress: string }> = ({ pairAddre
     return null;
   }
 
+  console.log(styles.analyticsLink_container)
   return (
     <div
       className={`${styles.analyticsLink_container} ${styles[theme.currentTheme]}`}

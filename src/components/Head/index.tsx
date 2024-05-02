@@ -14,13 +14,14 @@ import { Icon } from '../Base';
 export const Head: React.FC<IStyledChildrenProps<BoxProps>> = withTheme(
   observer(({ theme, ...props }: IStyledChildrenProps<BoxProps>) => {
     const history = useHistory();
-    const { routing, exchange } = useStores();
+    const { routing } = useStores();
     const { palette, container } = theme;
     const { minWidth, maxWidth } = container;
 
+    console.log(cn(styles.itemToken))
+
     const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
-    const isExplorer = history.location.pathname === '/explorer';
     const isSwap = history.location.pathname === '/swap';
     const isPool = history.location.pathname === '/pool';
     // const isTokens = history.location.pathname === '/tokens';
@@ -28,7 +29,6 @@ export const Head: React.FC<IStyledChildrenProps<BoxProps>> = withTheme(
     // const isFaq = history.location.pathname === '/faq';
     // const isInfo = history.location.pathname === '/info';
     // const isEarn = history.location.pathname === '/earn';
-    const isSeFi = history.location.pathname === '/sefi';
 
     const goToBridge = () => {
       routing.push(`/`);
@@ -131,16 +131,6 @@ export const Head: React.FC<IStyledChildrenProps<BoxProps>> = withTheme(
               <Text>Pool</Text>
             </Box>
 
-            <Box
-              className={cn(styles.itemToken, isSeFi ? styles.selected : '')}
-              onClick={() => {
-                const url = `https://app.secretswap.net`;
-                const win = window.open(url, '_blank');
-                win.focus();
-              }}
-            >
-              <Text>SeFi</Text>
-            </Box>
 
             {/* <Box className={cn(styles.itemToken, isFaq ? styles.selected : '')} onClick={() => routing.push('/faq')}>
               <Text>FAQ</Text>

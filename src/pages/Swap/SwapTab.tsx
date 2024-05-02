@@ -11,7 +11,7 @@ import { cacheFeesForExecuteUSD, getFeeForExecute, Snip20Send } from '../../bloc
 import { FlexRowSpace } from '../../components/Swap/FlexRowSpace';
 import { PairMap, SwapPair } from '../TokenModal/types/SwapPair';
 import cn from 'classnames';
-import * as styles from './styles.styl';
+import './styles.scss'
 import './style.scss'
 import { RouteOutput, RouteRow } from 'components/Swap/RouteRow';
 import { AsyncSender } from '../../blockchain-bridge/scrt/asyncSender';
@@ -498,7 +498,7 @@ export class SwapTab extends React.Component<
 
     return (
       <>
-        <Container className={`${styles.swapContainerStyle} ${styles[stores.theme.currentTheme]} swap-container-style`}>
+        <Container className={`swap-container-style`}>
           <SwapAssetRow
             secretjs={this.props.secretjs}
             label="From"
@@ -519,11 +519,11 @@ export class SwapTab extends React.Component<
             error={btnError}
           />
           <div
-            className={`${styles.swap_middle_row} ${styles[stores.theme.currentTheme]}`}
+            className={`swap_middle_row }`}
           >
             {this.state.loadingSwap ? (
               <div>
-                <img className={cn(styles.spin)} width="28" height="23" src="/static/logoIcon.svg" alt="Secret Swap" />
+                <img className='spin' width="28" height="23" src="/static/logoIcon.svg" alt="Secret Swap" />
               </div>
             ) : (
               <div
@@ -550,7 +550,7 @@ export class SwapTab extends React.Component<
                   );
                 }}
               >
-                <img src="/static/exchange-arrows.svg" alt="exchange arrows" style={{width: "40px"}} className={`${styles.swapper_img} ${styles[stores.theme.currentTheme]}`}/>
+                <img src="/static/exchange-arrows.svg" alt="exchange arrows" style={{width: "40px"}} className={`swapper_img`}/>
               </div>
             )}
           </div>
@@ -586,7 +586,7 @@ export class SwapTab extends React.Component<
             </Button>
           ) : (
             <Button
-              className={`${styles.swap_button} ${styles[stores.theme.currentTheme]}`}
+              className='swap_button'
               disabled={!actionButtonMessages.includes(buttonMessage) || this.state.loadingSwap}
               // loading={this.state.loadingSwap}
               primary={buttonMessage === BUTTON_MSG_SWAP}
