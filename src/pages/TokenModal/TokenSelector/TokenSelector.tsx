@@ -11,9 +11,8 @@ import { ClearCustomTokensButton } from './ClearCustomTokens';
 import { ExitIcon } from '../../../ui/Icons/ExitIcon';
 import { SwapToken, SwapTokenFromSnip20Params } from '../types/SwapToken';
 import cn from 'classnames';
-import styles from './styles.styl';
-import { BigNumber } from 'bignumber.js';
-import { useStores } from 'stores';
+import * as styles from './styles.styl';
+import { useStores } from '../../../stores';
 import Scrollbars from 'react-custom-scrollbars';
 
 export const TokenSelector = (props: {

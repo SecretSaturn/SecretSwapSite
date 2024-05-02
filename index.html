@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +7,10 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // fix the keplr window type error when there are no node polyfills
+      var global = global || window
+    </script>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

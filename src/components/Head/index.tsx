@@ -7,10 +7,9 @@ import { observer } from 'mobx-react-lite';
 import { IStyledChildrenProps } from 'interfaces';
 import { Title } from '../Base/components/Title';
 import { useStores } from '../../stores';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import cn from 'classnames';
-import { TOKEN } from '../../stores/interfaces';
-import { Icon } from 'components/Base';
+import { Icon } from '../Base';
 
 export const Head: React.FC<IStyledChildrenProps<BoxProps>> = withTheme(
   observer(({ theme, ...props }: IStyledChildrenProps<BoxProps>) => {

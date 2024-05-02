@@ -3,7 +3,7 @@ import { Button, Image } from 'semantic-ui-react';
 import { AuthWarning } from '../AuthWarning';
 import { useStores } from '../../stores';
 import { observer } from 'mobx-react';
-import { Icon, Text } from 'components/Base';
+import { Icon, Text } from '../Base';
 import { truncateAddressString } from '../../utils';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 

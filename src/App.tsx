@@ -10,6 +10,7 @@ import { SwapPagePool } from './pages/Pool';
 import { InfoModal } from './components/InfoModal';
 import './notifications.css'
 
+
 export const App: React.FC = () => (
   <Providers>
     <Suspense fallback={<div />}>

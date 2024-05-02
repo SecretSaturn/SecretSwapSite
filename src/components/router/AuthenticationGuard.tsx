@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react-lite';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 
 interface Props {
   render: (props: { isAuthenticated: boolean }) => React.ReactNode;

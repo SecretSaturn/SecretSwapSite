@@ -5,8 +5,8 @@ import { FlexRowSpace } from './FlexRowSpace';
 import Loader from 'react-loader-spinner';
 import BigNumber from 'bignumber.js';
 import { formatAsUSD, formatSignificantFigures } from 'utils';
-import { useStores } from 'stores';
-import style from './style.styl'
+import { useStores } from '../../stores';
+import * as style from './style.styl'
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;

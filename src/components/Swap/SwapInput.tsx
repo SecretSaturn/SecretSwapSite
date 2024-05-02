@@ -1,7 +1,7 @@
 import { Input } from 'semantic-ui-react';
 import React from 'react';
-import styles from './style.styl';
-import { useStores } from 'stores';
+import * as styles from './style.styl';
+import { useStores } from '../../stores';
 
 export const SwapInput = (props: {
   value: string;

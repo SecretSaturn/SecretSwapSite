@@ -1,12 +1,11 @@
 import cn from 'classnames';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import { Button, Icon, Input, Popup } from 'semantic-ui-react';
 import React, { useEffect, useState } from 'react';
 import { unlockToken } from '../../../utils';
 import ScrtTokenBalanceSingleLine from './ScrtTokenBalanceSingleLine';
 import BigNumber from 'bignumber.js';
 import { unlockJsx } from 'pages/Swap/utils';
-import { useStores } from 'stores';
 
 const buttonStyle = {
   borderRadius: '15px',

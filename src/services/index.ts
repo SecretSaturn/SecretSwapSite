@@ -14,8 +14,6 @@ import {
 } from '../stores/interfaces';
 import * as agent from 'superagent';
 import { SwapStatus } from '../constants';
-import { ProxyTokens } from '../blockchain-bridge/eth/proxyTokens';
-import { networkFromToken, NETWORKS } from '../blockchain-bridge/eth/networks';
 import axios from 'axios';
 
 //
@@ -91,13 +89,6 @@ const tokenLabels = {
   'XVS': 'XVS(BSC)'
 }
 
-const availableNetworks = [NETWORKS.ETH, NETWORKS.BSC]; //, NETWORKS.PLSM
-
-const BACKENDS = {
-  [NETWORKS.ETH]: globalThis.config.BACKEND_URL,
-  [NETWORKS.BSC]: globalThis.config.BSC_BACKEND_URL,
-  [NETWORKS.PLSM]: globalThis.config.PLSM_BACKEND_URL,
-};
 
 const backendUrl = (network: NETWORKS, url) => {
   return `${BACKENDS[network]}${url}`;

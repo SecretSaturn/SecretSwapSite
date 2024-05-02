@@ -1,16 +1,7 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import reactRefresh from '@vitejs/plugin-react-refresh';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: [
-          '@babel/plugin-transform-react-jsx',
-          ['@babel/plugin-transform-typescript', { allowDeclareFields: true }]
-        ],
-        presets: ['@babel/preset-typescript'],
-      }
-    })
-  ]
+  plugins: [reactRefresh(), tsconfigPaths()]
 });

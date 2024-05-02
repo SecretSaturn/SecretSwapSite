@@ -2,10 +2,10 @@ import BigNumber from 'bignumber.js';
 import useWindowDimensions from 'components/Swap/RouteRow';
 import React, { useState } from 'react';
 import { Container, Popup, Icon } from 'semantic-ui-react';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 import { formatSignificantFigures } from 'utils';
 import { PairAnalyticsLink } from '../../components/Swap/PairAnalyticsLink';
-import style from './styles.styl';
+import * as style from './styles.styl';
 export const AdditionalInfo = ({
   minimumReceived,
   maximumSold,

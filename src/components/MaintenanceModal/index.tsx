@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { Modal } from 'semantic-ui-react';
 import './style.scss';
 import { CloseIcon } from 'ui/Icons';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 
 interface MaintenanceModalProps {
   open: boolean;

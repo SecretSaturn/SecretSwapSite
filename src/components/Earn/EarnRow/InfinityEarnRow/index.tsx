@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../styles.styl';
+import * as styles from '../styles.styl';
 import '../style.scss'
 import cn from 'classnames';
 import { Accordion, Grid, Icon, Image, Input, Segment, Rating } from 'semantic-ui-react';

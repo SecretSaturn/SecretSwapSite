@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
-import styles from '../styles.styl';
+import * as styles from '../styles.styl';
 import cn from 'classnames';
 import { CosmWasmClient } from 'secretjs';
 import { Accordion, Grid, Icon, Image, Segment, Container } from 'semantic-ui-react';

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import styles from '../styles.styl';
+import * as styles from '../styles.styl';
 import { Button, Grid, Icon, Input, Popup } from 'semantic-ui-react';
 import React, { useEffect, useRef, useState } from 'react';
 import WithdrawStakeButton from './WithdrawStakeButton';

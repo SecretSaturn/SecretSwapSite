@@ -5,7 +5,6 @@ import { StdFee } from 'secretjs/types/types';
 import { Tokens } from 'stores/Tokens';
 import { GAS_FOR_BASE_SWAP_ROUTE, GAS_FOR_SWAP_DIRECT } from 'utils/gasPrices';
 import { EXCHANGE_MODE, TOKEN } from '../../stores/interfaces';
-import { NETWORKS } from '../eth/networks';
 
 const HRP = 'secret';
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { RedirectProps, Redirect, useLocation } from 'react-router-dom';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 import { observer } from 'mobx-react-lite';
 
 export const RedirectEx: React.FC<RedirectProps> = observer(props => {

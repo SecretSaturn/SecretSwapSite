@@ -7,7 +7,7 @@ import { Icon } from '../../../Icons';
 import { ICommonInputProps } from '../../common';
 import { SelectType, getStyles } from './getStyles';
 import { Box } from 'grommet';
-import { Text } from 'components/Base';
+import { Text } from '../../../../../../components/Base';
 
 export interface ISelectOption {
   text: string | number;

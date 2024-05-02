@@ -1,7 +1,6 @@
-import React from "react";
-import MaintenanceModal from 'components/MaintenanceModal';
+import MaintenanceModal from '../MaintenanceModal';
 import { observer } from "mobx-react";
-import { useStores } from "stores";
+import { useStores } from "../../stores";
 
 export default observer(()=>{
   const {user} = useStores();

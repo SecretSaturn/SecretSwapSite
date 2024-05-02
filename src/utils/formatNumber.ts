@@ -1,5 +1,4 @@
 import { BigNumber } from 'bignumber.js';
-const BN = require('bn.js');
 
 //https://stackoverflow.com/questions/9461621/format-a-number-as-2-5k-if-a-thousand-or-more-otherwise-900
 export const nFormatter = (num, digits) => {
@@ -170,7 +169,7 @@ export const mulDecimals = (amount: string | number, decimals: string | number) 
   const decimalsMul = `10${new Array(Number(decimals)).join('0')}`;
   const amountStr = new BigNumber(amount).multipliedBy(decimalsMul);
 
-  return new BN(amountStr.toFixed());
+  return new BigNumber(amountStr.toFixed());
 };
 
 export const divDecimals = (amount: string | number, decimals: string | number) => {

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Icon } from '../Icons';
 import { Row } from '../Layout';
 
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 
 interface ICollapseProps {
   header: string | React.ReactNode;

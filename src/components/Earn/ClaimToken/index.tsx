@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import cn from 'classnames';
 import { observer } from 'mobx-react';
 import { useStores } from '../../../stores';

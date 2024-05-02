@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import * as React from 'react';
 
-import styles from './styles.styl';
+import * as styles from'./styles.styl';
 
 interface IProps {
   size?: 'small';

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import styles from '../styles.styl';
+import * as styles from '../styles.styl';
 import ClaimButton from './ClaimButton';
 import React from 'react';
 import { UserStoreEx } from '../../../../stores/UserStore';

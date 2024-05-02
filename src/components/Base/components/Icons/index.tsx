@@ -6,7 +6,7 @@ import * as icons from './tsx_svg_icons';
 
 import { TEdgeSize, getMarginCSS, getPaddingCSS } from '../../utils';
 import { ITooltipProps, Tooltip } from '../Tooltip';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 
 interface IIconProps {
   glyph: string;

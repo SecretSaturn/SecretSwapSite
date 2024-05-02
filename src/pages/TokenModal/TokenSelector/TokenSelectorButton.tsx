@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import cn from 'classnames';
 import { TokenButton } from './TokenButton';
 import { SwapToken } from '../types/SwapToken';
 import {ExpandIcon} from '../../../ui/Icons/ExpandIcon';
-import { useStores } from 'stores';
+import { useStores } from '../../../stores';
 
 export const TokenSelectorButton = (props: { token?: SwapToken; onClick?: any }) => {
   const isEmpty = !props?.token;

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { Button, Modal } from 'semantic-ui-react';
 import { SwapInput } from '../../../components/Swap/SwapInput';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import cn from 'classnames';
 import { IsValid } from './IsValid';
 import { validateBech32Address } from '../../../blockchain-bridge';
 import { Text } from '../../../components/Base';
 import { ExitIcon } from '../../../ui/Icons/ExitIcon';
 import { SwapToken } from '../types/SwapToken';
-import { useStores } from 'stores';
+import { useStores } from '../../../stores';
 
 const AddTokenButton = (props: { onClick?: any }) => {
   const {theme} = useStores();

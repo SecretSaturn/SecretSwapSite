@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './styles.scss';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 
 const MessageDismiss = () => {
   const { theme } = useStores();

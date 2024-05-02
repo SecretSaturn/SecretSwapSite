@@ -1,4 +1,4 @@
-import { Icon } from 'components/Base';
+import { Icon } from '../Base';
 import React, { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 

@@ -11,7 +11,7 @@ import { cacheFeesForExecuteUSD, getFeeForExecute, Snip20Send } from '../../bloc
 import { FlexRowSpace } from '../../components/Swap/FlexRowSpace';
 import { PairMap, SwapPair } from '../TokenModal/types/SwapPair';
 import cn from 'classnames';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import './style.scss'
 import { RouteOutput, RouteRow } from 'components/Swap/RouteRow';
 import { AsyncSender } from '../../blockchain-bridge/scrt/asyncSender';

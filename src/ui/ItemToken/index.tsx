@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box } from 'grommet';
 import cn from 'classnames';
 import { Text } from 'components/Base/components/Text';
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import { TOKEN } from 'stores/interfaces';
 
 const icons: Record<TOKEN, string> = {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useStores } from 'stores';
-import styles from './style.styl';
+import { useStores } from '../../stores';
+import * as styles from './style.styl';
 
 export const PairAnalyticsLink: React.FC<{ pairAddress: string }> = ({ pairAddress }) => {
   const {theme} = useStores();

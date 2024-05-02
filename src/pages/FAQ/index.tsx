@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Box } from 'grommet';
-import { Title, Text } from 'components/Base';
-import styles from './faq-styles.styl';
+import { Title, Text } from '../../components/Base';
+import * as styles from './faq-styles.styl';
 import { BaseContainer } from '../../components/index';
 import { PageContainer } from '../../components/index';
 

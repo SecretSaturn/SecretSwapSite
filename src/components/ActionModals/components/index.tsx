@@ -1,7 +1,7 @@
 import { Box } from 'grommet';
 import { withTheme } from 'styled-components';
 import { IStyledProps } from '../../../themes/index';
-import { Title } from 'components/Base';
+import { Title } from '../../Base';
 import { Spinner } from 'ui/Spinner';
 
 interface IHederProps {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Icon } from 'semantic-ui-react';
-import style from './style.styl';
+import * as style from './style.styl';
 import { FlexRowSpace } from './FlexRowSpace';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 import BigNumber from 'bignumber.js';
 import { formatSignificantFigures } from 'utils';
 

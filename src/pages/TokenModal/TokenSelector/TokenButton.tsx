@@ -1,11 +1,11 @@
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import cn from 'classnames';
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import { ExpandIcon } from '../../../ui/Icons/ExpandIcon';
 import { SwapToken } from '../types/SwapToken';
 import { truncateSymbol } from '../../../utils';
-import { useStores } from 'stores';
+import { useStores } from '../../../stores';
 
 export const TokenButton = (props: { token: SwapToken; onClick?: any }) => {
   const {theme} = useStores()

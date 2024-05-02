@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { valueToDecimals } from '../../../../utils';
-import styles from '../styles.styl';
+import * as styles from '../styles.styl';
 import { Button } from 'semantic-ui-react';
 import { useStores } from 'stores';
 import { getGasFeeInfinityPool } from '../gasFunctions';

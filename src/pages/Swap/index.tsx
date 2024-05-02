@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box } from 'grommet';
-import styles from '../FAQ/faq-styles.styl';
-import { PageContainer } from 'components/PageContainer';
-import { BaseContainer } from 'components/BaseContainer';
-import { useStores } from 'stores';
-import { fixUnlockToken, sleep, unlockToken } from 'utils';
+import * as styles from '../FAQ/faq-styles.styl';
+import { PageContainer } from '../../components/PageContainer';
+import { BaseContainer } from '../../components/BaseContainer';
+import { useStores } from '../../stores';
+import { fixUnlockToken, sleep, unlockToken } from '../../utils/index';
 import { UserStoreEx } from 'stores/UserStore';
 import { observer } from 'mobx-react';
 import { SwapTab } from './SwapTab';
@@ -22,8 +22,8 @@ import { pairIdFromTokenIds, PairMap, SwapPair } from '../TokenModal/types/SwapP
 import { NativeToken, Token } from '../TokenModal/types/trade';
 import { SecretSwapPairs } from 'stores/SecretSwapPairs';
 import { SecretSwapPools } from 'stores/SecretSwapPools';
-import { getAllPaths } from 'utils/getAllPaths';
-import style from './styles.styl';
+import { getAllPaths } from '../../utils/getAllPaths';
+import * as style from './styles.styl';
 
 export const SwapPageWrapper = observer(() => {
   // SwapPageWrapper is necessary to get the user store from mobx 🤷‍♂️

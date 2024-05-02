@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { observer } from 'mobx-react-lite';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 import { Header } from './components';
 import { Footer } from '../Footer';
-import { ActionModalConfig } from 'stores/ActionModalsStore';
+import { ActionModalConfig } from '../../stores/ActionModalsStore';
 import { useMemo, useRef } from 'react';
 import { observable } from 'mobx';
-import { ModalView, Button } from 'components/Base';
+import { ModalView, Button } from '../../components/Base';
 
 export type TActionModalProps<T = any> = {
   config: ActionModalConfig;

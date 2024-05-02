@@ -1,9 +1,9 @@
-import styles from './styles.styl';
+import * as styles from './styles.styl';
 import cn from 'classnames';
 import React from 'react';
 import { Text } from '../../../components/Base/components/Text';
 import LocalStorageTokens from '../../../blockchain-bridge/scrt/CustomTokens';
-import { useStores } from 'stores';
+import { useStores } from '../../../stores';
 
 export const ClearCustomTokensButton = () => {
   const {theme} = useStores();

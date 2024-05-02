@@ -8,7 +8,7 @@ import './styles.scss';
 
 import { TooltipBody } from './Body';
 
-const RCTooltip: any = require('rc-tooltip');
+import  RCTooltip from 'rc-tooltip';
 
 @observer
 class TooltipClass extends React.Component<ITooltipProps> {
@@ -98,7 +98,7 @@ const Overlay = styled.div<any>`
 
   z-index 999;
   max-width: 240px;
-  
+
   font-family: ${props => props.theme.fontBase || '"Roboto-Medium", sans-serif'};
   font-size: 15px;
 `;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Icon, Text } from 'components/Base';
+import { Icon, Text } from '../../../../../../components/Base';
 import { getFilesWithHashes, useDerivedState } from './utils';
 import { FileUploader } from './Uploader';
 

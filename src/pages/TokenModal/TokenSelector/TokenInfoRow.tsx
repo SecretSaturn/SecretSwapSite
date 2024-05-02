@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Image } from 'semantic-ui-react';
 import cn from 'classnames';
-import styles from '../styles.styl';
+import * as styles from '../styles.styl';
 import Loader from 'react-loader-spinner';
 import { FlexRowSpace } from '../../../components/Swap/FlexRowSpace';
 import { SwapToken } from '../types/SwapToken';
 import BigNumber from 'bignumber.js';
 import { displayHumanizedBalance, humanizeBalance } from 'utils/formatNumber';
-import { useStores } from 'stores';
+import { useStores } from '../../../stores';
 import { fixUnlockToken, unlockToken } from 'utils';
 import { getNativeBalance, unlockJsx, wrongViewingKey } from './utils';
 import { CosmWasmClient } from 'secretjs';

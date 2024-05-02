@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { Box, BoxProps } from 'grommet';
-import { Head } from 'components';
-import { MainFooter } from 'components';
 import { withTheme } from 'styled-components';
 import { IStyledChildrenProps } from 'interfaces';
 import './notifications.css';
 import Header from '../Header/PageHeader';
 import SideNav from '../SideNav/SideNav'
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 import './styles.scss'
 import MessageDismiss from 'ui/message/Message';
 import MaintenanceWrapper from './MaintenanceWrapper';

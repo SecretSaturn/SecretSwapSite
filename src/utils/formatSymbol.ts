@@ -1,4 +1,4 @@
-import { EXCHANGE_MODE } from 'stores/interfaces';
+import { EXCHANGE_MODE } from '../stores/interfaces';
 
 // todo: fix this up - proxy token
 export const formatSymbol = (mode: EXCHANGE_MODE, symbol: string) => {

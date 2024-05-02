@@ -7,7 +7,7 @@ import { render } from 'react-dom';
 import Loader from 'react-loader-spinner';
 import { ExecuteResult, SigningCosmWasmClient } from 'secretjs';
 import { Button, Container, Icon, Message, Popup } from 'semantic-ui-react';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 import { canonicalizeBalance, displayHumanizedBalance, humanizeBalance } from 'utils/formatNumber';
 import { getNativeBalance, storeTxResultLocally, unlockJsx } from './utils';
 import { UserStoreEx } from 'stores/UserStore';

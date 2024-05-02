@@ -4,7 +4,6 @@ import * as services from 'services';
 import { ListStoreConstructor } from './core/ListStoreConstructor';
 import { computed } from 'mobx';
 import { sleep } from '../blockchain-bridge/utils';
-import { networkFromToken, NETWORKS } from '../blockchain-bridge';
 import BigNumber from 'bignumber.js';
 
 export class Tokens extends ListStoreConstructor<ITokenInfo> {

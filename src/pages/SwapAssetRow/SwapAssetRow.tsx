@@ -9,7 +9,7 @@ import { SigningCosmWasmClient } from 'secretjs';
 import { SwapTokenMap } from '../TokenModal/types/SwapToken';
 import { CosmWasmClient } from 'secretjs';
 import { FlexRowSpace } from '../../components/Swap/FlexRowSpace';
-import { useStores } from 'stores';
+import { useStores } from '../../stores';
 import './style.scss';
 
 const PricePopup = () => (

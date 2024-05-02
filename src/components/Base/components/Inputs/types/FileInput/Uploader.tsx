@@ -1,4 +1,4 @@
-import { Icon, Text, Title } from 'components/Base';
+import { Icon, Text, Title } from '../../../../../../components/Base';
 import * as React from 'react';
 import styled from 'styled-components';
 

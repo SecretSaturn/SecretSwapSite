@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from 'grommet';
-import { Icon, TextInput } from 'components/Base';
+import { Icon, TextInput } from '../Base';
 import { observer } from 'mobx-react-lite';
 import styled from 'styled-components';
 import { baseTheme } from '../../themes';

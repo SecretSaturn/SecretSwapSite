@@ -1,10 +1,9 @@
-import React from 'react';
 import { Box } from 'grommet';
-import { Title } from 'components/Base';
-import styles from '../FAQ/faq-styles.styl';
-import { PageContainer } from 'components/PageContainer';
-import { BaseContainer } from 'components/BaseContainer';
-import { Info } from 'components/Info';
+import { Title } from '../../components/Base';
+import * as styles from '../FAQ/faq-styles.styl';
+import { PageContainer } from '../../components/PageContainer';
+import { BaseContainer } from '../../components/BaseContainer';
+import { Info } from '../../components/Info';
 
 export const InfoPage = () => {
   return (
