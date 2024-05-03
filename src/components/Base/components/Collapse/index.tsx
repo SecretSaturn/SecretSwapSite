@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Icon } from '../Icons';
 import { Row } from '../Layout';
 
-import * as styles from './styles.styl';
+import './styles.scss';
 
 interface ICollapseProps {
   header: string | React.ReactNode;
@@ -37,12 +37,9 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseState> {
     const { header, bordered, children, style } = this.props;
     const { isCollapsed } = this.state;
 
-    const className = cn(styles.collapse, {
-      [styles.collapseBordered]: bordered,
-    });
 
     return (
-      <div className={className} style={style}>
+      <div className={'collapse collapseBordered: bordered'} style={style}>
         <div onClick={this.toggle} style={{ cursor: 'pointer' }}>
           <Row ai={'center'} jc={'center'}>
             {isCollapsed ? (
@@ -51,7 +48,7 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseState> {
               <Icon glyph="ArrowUp" size="small" color={'black'} />
             )}
             <Row style={{ width: '100%', marginLeft: '10px' }} ai="center">
-              <div className={styles.collapseHeader}>{header}</div>
+              <div className={'collapseHeader'}>{header}</div>
             </Row>
           </Row>
         </div>

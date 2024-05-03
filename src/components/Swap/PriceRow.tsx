@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Icon } from 'semantic-ui-react';
-import * as style from './style.styl';
+import './style.scss';
 import { FlexRowSpace } from './FlexRowSpace';
 import { useStores } from '../../stores';
 import BigNumber from 'bignumber.js';
@@ -16,7 +16,7 @@ export const PriceRow = ({ price, fromToken, toToken, labelPrefix }: { price: Bi
   const displayRightToken = isPriceInverse ? fromToken : toToken;
 
   return (
-    <div className={`${style.priceRow_container} ${style[theme.currentTheme]}`}>
+    <div className={`priceRow_container`}>
       <span style={{marginRight: '0.5rem'}}>{labelPrefix}Price</span>
       <FlexRowSpace/>
       {`${formatSignificantFigures(displayPrice, 8)} ${displayLeftToken} per ${displayRightToken}`}

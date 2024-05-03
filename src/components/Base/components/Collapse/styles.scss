@@ -1,8 +1,5 @@
-Basic300 = #E6E6E6;
-$fontFamily = Helvetica, sans-serif;
-
 .collapse {
-  font-family: $fontFamily;
+  font-family: Helvetica, sans-serif;
   .collapseHeader {
     font-size: 16px;
     line-height: 28px;
@@ -13,7 +10,7 @@ $fontFamily = Helvetica, sans-serif;
 }
 
 .collapseBordered {
-  border-top: 1px solid Basic300;
+  border-top: 1px solid #E6E6E6;
   padding-top: 30px;
   margin-top: 30px;
 }

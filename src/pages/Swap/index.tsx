@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box } from 'grommet';
-import * as styles from '../FAQ/faq-styles.styl';
+import '../FAQ/faq-styles.scss';
 import { PageContainer } from '../../components/PageContainer';
 import { BaseContainer } from '../../components/BaseContainer';
 import { useStores } from '../../stores';

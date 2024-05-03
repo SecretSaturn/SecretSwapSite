@@ -1,24 +1,24 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
-import { CosmWasmClient } from 'secretjs';
 import { Container } from 'semantic-ui-react';
 import { UserStoreEx } from 'stores/UserStore';
 import { WithdrawLiquidityPanel } from './WithdrawLiqudityPanel';
 import { TabsHeader } from './TabsHeader';
 import { SwapTokenMap } from '../TokenModal/types/SwapToken';
-import * as styles from './styles.styl';
+import './styles.scss';
 import { PairMap } from '../TokenModal/types/SwapPair';
 import Loader from 'react-loader-spinner';
 import { AsyncSender } from '../../blockchain-bridge/scrt/asyncSender';
 import Theme from 'themes';
 import { observer } from 'mobx-react';
 import Scrollbars from 'react-custom-scrollbars';
+import { SecretNetworkClient } from 'secretjs';
 
 @observer
 export class WithdrawTab extends React.Component<
   {
     user: UserStoreEx;
-    secretjs: CosmWasmClient;
+    secretjs: SecretNetworkClient;
     secretjsSender: AsyncSender;
     tokens: SwapTokenMap;
     balances: { [symbol: string]: BigNumber | JSX.Element };
@@ -36,7 +36,7 @@ export class WithdrawTab extends React.Component<
 
   state = { searchText: '', openRow: -1 };
   renderThumbVertical = () => {
-    return <div className={`${styles.thumb} ${styles[this.props.theme.currentTheme]}`}></div>;
+    return <div className={`thumb`}></div>;
   };
   setOpenRow(openRowID: number): void {
     this.setState({ openRow: openRowID });
@@ -46,7 +46,7 @@ export class WithdrawTab extends React.Component<
 
     if (pairs.length === 0) {
       return (
-        <Container className={`${styles.swapContainerStyle} ${styles[this.props.theme.currentTheme]}`}>
+        <Container className={`swapContainerStyle`}>
           <TabsHeader />
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Loader type="ThreeDots" color="#cb9b51" height="0.5em" />

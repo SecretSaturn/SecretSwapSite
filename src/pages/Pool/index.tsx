@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box } from 'grommet';
-import * as styles from '../FAQ/faq-styles.styl';
+import '../FAQ/faq-styles.scss';
 import { PageContainer } from '../../components/PageContainer';
 import { BaseContainer } from '../../components/BaseContainer';
 import { useStores } from '../../stores/index';
@@ -636,7 +636,7 @@ export class SwapRouter extends React.Component<
       <BaseContainer>
         <PageContainer>
           <Box
-            className={styles.faqContainer}
+            className={'faqContainer'}
             pad={{ top: 'large' }}
             style={{ alignItems: 'center' }}
           >

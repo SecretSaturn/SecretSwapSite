@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Box } from 'grommet';
 import { Title, Text } from '../../components/Base';
-import * as styles from './faq-styles.styl';
+import './faq-styles.scss';
 import { BaseContainer } from '../../components/index';
 import { PageContainer } from '../../components/index';
 
@@ -295,7 +295,7 @@ export const FAQPage = () => {
   return (
     <BaseContainer>
       <PageContainer>
-        <Box className={styles.faqContainer} pad={{ horizontal: 'large', top: 'large' }}>
+        <Box className={'faqContainer'} pad={{ horizontal: 'large', top: 'large' }}>
           <Box direction="row" justify="center" margin={{ bottom: 'medium' }}>
             <Title
               style={{

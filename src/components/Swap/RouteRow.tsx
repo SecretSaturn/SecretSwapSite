@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner';
 import BigNumber from 'bignumber.js';
 import { formatAsUSD, formatSignificantFigures } from 'utils';
 import { useStores } from '../../stores';
-import * as style from './style.styl'
+import './style.scss'
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;

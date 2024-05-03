@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { Coin, CosmWasmClient, ExecuteResult } from 'secretjs';
+import { Coin, CosmWasmClient, ExecuteResult, SecretNetworkClient } from 'secretjs';
 import { Button, Container } from 'semantic-ui-react';
 import { canonicalizeBalance, displayHumanizedBalance, humanizeBalance, sortedStringify, UINT128_MAX } from 'utils';
 import * as styles from './styles.styl';
@@ -80,7 +80,7 @@ const ButtonMessage = (state: ProvideState): string => {
 export class ProvideTab extends React.Component<
   {
     user: UserStoreEx;
-    secretjs: CosmWasmClient;
+    secretjs: SecretNetworkClient;
     secretjsSender: AsyncSender;
     tokens: SwapTokenMap;
     balances: {
