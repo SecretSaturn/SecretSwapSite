@@ -32,7 +32,6 @@ export const showMobileMenu = () => {
 // Import Icons
 const PageHeader = observer(({forceUpdate}:{forceUpdate:any}) =>{
 
-    const governancePaths = ['governance','proposal','sefistaking'];
     const { user, tokens,theme } = useStores();
     const [prices, setPrices] = useState({'sefi' : '0.0000', 'scrt' : '0.00'})
 
@@ -58,29 +57,12 @@ const PageHeader = observer(({forceUpdate}:{forceUpdate:any}) =>{
         // window.location.reload();
     }
 
-    useEffect(() => {
-        const asyncWrapper = async () => {
-            for (let i = 0; i < 4; i++) {
-                if (globalThis.config['PRICE_DATA']["SEFI/USDT"]) {
-                    try {
-                        setPrices({'sefi' : String(globalThis.config['PRICE_DATA']["SEFI/USDT"].price).slice(0,6),
-                        'scrt' : formatWithTwoDecimals(globalThis.config['PRICE_DATA']["SCRT/USD"].price)})
-                    } catch (error) {
-                    }
-                    break;
-                }
-                await sleep(1000);
-            }
-        }
-        asyncWrapper().then(() => { });
-    }, [])
-
     return(
         <>
             <div className={`${theme.currentTheme} page-header`} id="header">
                     <div className="page-header-left">
                         <img src="/static/menu-icon.svg" alt="Menu" id="hamburger-menu" onClick={showMobileMenu}/>
-                        <a href="https://www.secretswap.net/">
+                        <a>
                             {(theme.currentTheme === 'light')
                                 ? <img src='/static/secret-swap-dark.png' alt="SecretSwap logo" />
                                 : <img src='/static/secret-swap-light.png' alt="SecretSwap logo" />
@@ -92,10 +74,6 @@ const PageHeader = observer(({forceUpdate}:{forceUpdate:any}) =>{
                                 <img onClick={switchTheme} src='/static/sun.svg' alt="Key Icon"/> :
                                 <img onClick={switchTheme} src='/static/moon.svg' alt="Key Icon"/>
                             }
-                        </div>
-                        <div className="pricing">
-                            <img src='/static/price-logo-scrt.png' alt='SCRT Price Logo'></img>
-                            <span className="token">SCRT</span> ${prices['scrt']}
                         </div>
                     </div>
 

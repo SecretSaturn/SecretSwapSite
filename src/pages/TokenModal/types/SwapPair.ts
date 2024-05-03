@@ -1,7 +1,7 @@
 import { Asset, NativeToken, Token } from './trade';
 import { getSymbolsFromPair, Pair } from '../../../blockchain-bridge/scrt/swap';
 import { SwapTokenMap } from './SwapToken';
-import { CosmWasmClient } from 'secretjs';
+import { SecretNetworkClient } from 'secretjs';
 
 export class SwapPair {
   pair_identifier: string;
@@ -80,13 +80,13 @@ export class SwapPair {
   }
 
   private static code_hash: string;
-  static getPairCodeHash(pair_address: string, secretjs: CosmWasmClient): Promise<string> {
+  static getPairCodeHash(pair_address: string, secretjs: SecretNetworkClient): Promise<string> {
     // TODO fix this if we ever have a factory with multiple pair_code_id
     // For now this is the best way to avoid a lot of secretjs requests
     return new Promise(async (accept, reject) => {
       try {
         if (!SwapPair.code_hash) {
-          SwapPair.code_hash = await secretjs.getCodeHashByContractAddr(pair_address);
+          SwapPair.code_hash = (await secretjs.query.compute.codeHashByContractAddress({contract_address:pair_address})).code_hash;
         }
         accept(SwapPair.code_hash);
       } catch (e) {

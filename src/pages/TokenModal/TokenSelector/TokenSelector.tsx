@@ -4,7 +4,6 @@ import { TokenInfoRow } from './TokenInfoRow';
 import { TokenSelectorButton } from './TokenSelectorButton';
 import { AddTokenModal } from './AddTokenModal';
 import { GetSnip20Params, Snip20TokenInfo } from '../../../blockchain-bridge';
-import { CosmWasmClient } from 'secretjs';
 import LocalStorageTokens from '../../../blockchain-bridge/scrt/CustomTokens';
 import Loader from 'react-loader-spinner';
 import { ClearCustomTokensButton } from './ClearCustomTokens';
@@ -14,9 +13,10 @@ import cn from 'classnames';
 import './styles.scss';
 import { useStores } from '../../../stores';
 import Scrollbars from 'react-custom-scrollbars';
+import { SecretNetworkClient } from 'secretjs';
 
 export const TokenSelector = (props: {
-  secretjs: CosmWasmClient;
+  secretjs: SecretNetworkClient;
   tokens: SwapToken[];
   token?: SwapToken;
   onClick?: any;
@@ -69,7 +69,7 @@ export const TokenSelector = (props: {
       >
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <span>Select a token</span>
-          <span style={{ cursor: 'pointer' }} onClick={() => setOpen(true)}>
+          <span style={{ cursor: 'pointer' }} onClick={() => setOpen(false)}>
             <ExitIcon />
           </span>
         </div>
